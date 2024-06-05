@@ -71,6 +71,7 @@ const UserProfile = () => {
       const updatedUser = { ...currentUser, desc: newDescription, img: url };
       localStorage.setItem('currentUser', JSON.stringify(updatedUser));
       setIsEditing(false);
+      window.location.reload();
       
     } catch (err) {
       console.log(err);
