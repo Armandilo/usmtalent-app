@@ -15,6 +15,7 @@ import cors from "cors";
 import userreviewRoute from "./routes/userreview.route.js";
 import barterRoute from "./routes/barter.route.js";
 import { verifyToken } from "./middleware/jwt.js";
+
 const app = express();
 dotenv.config();
 mongoose.set("strictQuery", true);
@@ -32,22 +33,23 @@ app.use(
   cors({
     origin: process.env.CLIENT_URL || "http://localhost:5173",
     credentials: true,
+    allowedHeaders: ["Authorization", "Content-Type"]
   })
 );
 app.use(express.json());
 app.use(cookieParser());
 
-app.use("/api/auth", verifyToken, authRoute);
-app.use("/api/users", verifyToken, userRoute);
-app.use("/api/skills",verifyToken, skillRoute);
-app.use("/api/orders",verifyToken, orderRoute);
-app.use("/api/conversations",verifyToken, conversationRoute);
-app.use("/api/messages",verifyToken, messageRoute);
-app.use("/api/chat",verifyToken, chatRoute);
-app.use("/api/chatmessages",verifyToken, chatmessageRoute);
-app.use("/api/reviews",verifyToken, reviewRoute);
-app.use("/api/userreviews",verifyToken, userreviewRoute);
-app.use("/api/barter",verifyToken, barterRoute);
+app.use("/api/auth", authRoute);
+app.use("/api/users", userRoute);
+app.use("/api/skills", skillRoute);
+app.use("/api/orders", verifyToken, orderRoute);
+app.use("/api/conversations", verifyToken, conversationRoute);
+app.use("/api/messages", verifyToken, messageRoute);
+app.use("/api/chat", verifyToken, chatRoute);
+app.use("/api/chatmessages", verifyToken, chatmessageRoute);
+app.use("/api/reviews", verifyToken, reviewRoute);
+app.use("/api/userreviews", verifyToken, userreviewRoute);
+app.use("/api/barter", verifyToken, barterRoute);
 
 app.use((err, req, res, next) => {
   const errorStatus = err.status || 500;
