@@ -40,7 +40,7 @@ app.use(express.json());
 app.use(cookieParser());
 
 app.use("/api/auth", authRoute);
-app.use("/api/users", userRoute);
+app.use("/api/users", verifyToken,userRoute);
 app.use("/api/skills", skillRoute);
 app.use("/api/orders", verifyToken, orderRoute);
 app.use("/api/conversations", verifyToken, conversationRoute);
