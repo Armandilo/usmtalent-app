@@ -1,0 +1,115 @@
+.homecard{
+    height: 710px;
+    display: flex;
+    justify-content: center;
+    background-color:#52006A;
+    color: white;
+    .container{
+        width: 1350px;
+        display: flex;
+        align-items: center;
+
+        .leftcontainer{
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            
+
+            
+            h1{
+                //font-family: 'Open sans', sans-serif;
+                font-family:'Montserrat', sans-serif;
+                font-size: 50px;
+                i{
+                    font-weight: 300;
+                }
+            }
+
+            .search{
+                display: flex;
+                align-items: center;
+                background-color: white;
+                border-radius: 5px;
+                //padding: 10px;
+                width: 650px;
+                justify-content: space-between;
+                .searchbar{
+                    margin: 10px;
+                    margin-left: 15px;
+
+                    display: flex;
+                    gap: 10px;
+                    align-items: center;
+                    width: 550px;
+                    
+                    input{
+                        border: none;
+                        outline: none;
+                        width: 100%;
+                        font-size: 16px;
+                        font-family: 'Roboto', sans-serif;
+
+                        &::placeholder{
+                            letter-spacing: 0.5px;
+                        }
+                    }
+
+                    .remove{
+                        background-color: transparent;
+                        color: lightgrey;
+                        border: none; 
+                        cursor: pointer;
+
+                      
+                    }
+                    
+                }
+
+                .searchbutton{
+                    background-color: #FF7600;
+                    color: white;
+                    width: 70px;
+                    height: 45px;
+                    border: none;
+                    //padding: 10px;
+                    border-top-right-radius: 5px;
+                    border-bottom-right-radius: 5px;
+                    cursor: pointer;
+                }
+
+            }
+            .popularcat{
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                font-family: 'Montserrat', sans-serif;
+                font-size: 14px;
+                span{
+
+                }
+                button{
+                    background-color: transparent;
+                    color: white;
+                    border: 1px solid #CD113B;
+                    padding: 10px 10px;
+                    border-radius: 20px;
+                    font-size: 14px;
+                    cursor: pointer;
+                    &:hover{
+                        background-color: #CD113B;
+                    }
+                }
+            }
+        }
+
+        .rightcontainer{
+            height: 110%;
+            margin-left: 80px;
+            margin-top: 90px;
+            img{
+                height: 110%;
+                object-fit: cover;
+            }
+        }
+    }
+}

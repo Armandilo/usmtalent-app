@@ -1,0 +1,150 @@
+.footer{
+    display: flex;
+    justify-content: center;
+    color: gray;
+    margin: 30px 0px;
+    font-family: 'Roboto', sans-serif;
+    background-color: rgb(245, 245, 245);
+    
+    .container{
+        width: 1350px;
+        
+
+
+        hr{
+            margin: 10px 0px;
+            height: 0px;
+            border: 1px solid rgb(241, 241, 241);
+            
+        }
+        .topcontainer{
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 30px;
+            margin-top: 25px;
+          
+
+            .item{
+                margin-right: 60px;
+            
+                .title{
+                   margin-bottom: 20px;
+                   font-size: 12px;
+
+                }
+                .categories{
+                    display: flex;
+                    gap: 18px;
+                    font-size: 14px;
+    
+                    .itemcat{
+                        gap: 15px;
+                        display: flex;
+                        flex-direction: column;
+    
+                    }
+    
+                    .itemcat2{
+                        gap: 15px;
+                        display: flex;
+                        flex-direction: column;
+    
+                    }
+                    
+                        
+    
+    
+                }
+
+    
+
+            }
+            .address{  
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+                
+                
+                .title{
+                    font-size: 12px;
+                    margin-bottom: 12px;
+                
+                }
+
+                span{
+                    font-size: 14px;
+                }
+
+                .contact{
+                    display: flex;
+                    flex-direction: column;
+                    margin-top: 1px;
+                    gap: 8px;
+                }
+
+            }
+
+            .telephone{
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+                .title{
+                    font-size: 12px;
+                    margin-bottom: 12px;
+                }
+
+                span{
+                    font-size: 14px;
+                }
+
+                .contact{
+                    display: flex;
+                    flex-direction: column;
+                    margin-top: 1px;
+                    gap: 8px;
+                }
+            }
+
+            .navigation{
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+                .title{
+                    font-size: 12px;
+                    margin-bottom: 12px;
+                }
+
+                span{
+                    font-size: 14px;
+                }
+
+                .item{
+                    display: flex;
+                    flex-direction: column;
+                    margin-top: 1px;
+                    gap: 15px;
+                }
+            }
+
+        }
+        .bottomcontainer{
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 40px;
+            .left{
+                h2{
+            
+                }
+            }
+
+            .right{
+                span{
+
+                }
+
+            }
+
+        }
+    }
+}

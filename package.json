@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "lottie-react": "^2.4.0",
+    "recharts": "^2.12.7"
+  }
+}

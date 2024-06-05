@@ -1,0 +1,410 @@
+.view-barter-page {
+    display: flex;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+    background-color: rgb(245, 245, 245);
+    
+    .container{
+        width: 1350px;
+        padding: 30px 0px;
+        display: flex;
+        gap: 50px;
+        flex-direction: column;
+        
+        .breadcrumbs{
+            font-weight: 300;
+            font-size: 16px;
+            color: grey;
+            margin-bottom: -30px;
+        }
+        .leftrightcontainer{
+            display: flex;
+            width: 1350px;
+            //padding: 30px 0px;
+            gap: 50px;
+            .left{
+                flex:2;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                border: 1px solid rgb(241, 241, 241);
+                padding: 20px;
+                //height: 440px;
+                background-color: white;
+                height: max-content;
+
+              
+                .order-header {
+                    border-bottom: 1px solid #ddd;
+                    padding-bottom: 15px;
+                    //margin-bottom: 15px;
+                
+              
+                
+                    .order-details {
+                      display: flex;
+                      justify-content: space-between;
+                      align-items: center;
+                
+                      .order-info {
+                        h2 {
+                          margin: 0;
+                        }
+                
+                        p {
+                          margin: 0;
+                          color: gray;
+                        }
+                      }
+                
+                      .order-amount {
+                        display: flex;
+                        align-items: center;
+                
+                        h2 {
+                          margin: 0 10px 0 0;
+                        }
+                
+                        button {
+                          background-color: #007bff;
+                          color: white;
+                          border: none;
+                          padding: 10px 20px;
+                          border-radius: 5px;
+                          cursor: pointer;
+                
+                          &:hover {
+                            background-color: #0056b3;
+                          }
+                        }
+                      }
+                    }
+                  }
+                
+                  .order-content {
+                    display: flex;
+                    flex-direction: column;
+
+                    .equivalencestatcontainer{
+                        display: flex;
+                        flex-direction: row;
+                        gap: 10px;
+                        margin-bottom: 20px;
+                        justify-content: center;
+                        padding-bottom: 20px;
+                        border-bottom: 1px solid #ddd;
+
+                        .bar{
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: center;
+                            gap: 20px;
+                            padding-right: 20px;
+                            border-right: 1px solid #ddd;
+                        }
+
+                        .statistics{
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            padding-left: 20px;
+                            padding-right: 30px;
+                            //border-right: 1px solid #ddd;
+
+                            &:not(:last-child){
+                                border-right: 1px solid #ddd;
+                            }
+                            h3{
+                                margin-bottom: 16px;
+                            }
+
+                            .value{
+                                background: linear-gradient(0deg, #e91e63, #673ab7);
+                                width:160px;
+                                height: 160px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                border-radius: 50%;
+                                box-shadow: 6px 6px 10px -1px rgba(0,0,0,0.15),
+                                            -6px -6px 10px -1px rgba(255,255,255,0.7);
+                                .inner{
+                                    width: 120px;
+                                    height: 120px;
+                                    background-color: white;
+                                    border-radius: 50%;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    box-shadow: inset 4px 4px 6px -1px rgba(0,0,0,0.2), 
+                                                inset -4px -4px 6px -1px rgba(255,255,255,0.7),
+                                                -0.5px -0.5px 0px rgba(255,255,255,1),
+                                                0.5px 0.5px 0px rgba(0,0,0,0.15),
+                                                0px 12px 10px -10px rgba(0,0,0,0.05);
+                                    p{
+                                        font-size: 16px;
+                                        font-weight: 600;
+                                        color: #555;
+                                    }
+                                }
+                                
+                            }
+                        }
+                    }
+                    .order-message {
+                      background-color: #f8f9fa;
+                      padding: 15px;
+                      //border: 1px solid #ddd;
+                      //border-radius: 5px;
+                      margin-bottom: 15px;
+                    
+                
+                      .requirements{
+                        display: flex;
+                        flex-direction: column;
+                        form{
+                          display: flex;
+                          flex-direction: column;
+                          
+                          label{
+                            font-size: 16px;
+                            p{
+                              margin-bottom: 20px;
+                            }
+                            textarea{
+                              width: 97%;
+                              height: 50px;
+                              padding: 10px;
+                              border: 1px solid #ddd;
+                              border-radius: 5px;
+                              
+                            }
+                          }
+
+                          button{
+                            width: 100%;
+                            background-color: #FF7600;
+                            color: white;
+                            border: none;
+                            padding: 10px 20px;
+                            border-radius: 5px;
+                            cursor: pointer;
+                            margin-top: 10px;
+                          
+                          }
+                        }
+                      }
+                    }
+                
+                    .order-table {
+                      width: 100%;
+                      border-collapse: collapse;
+                      margin-bottom: 15px;
+                
+                      th, td {
+                        border: 1px solid #ddd;
+                        padding: 10px;
+                        text-align: left;
+                      }
+                
+                      th {
+                        background-color: #f8f9fa;
+
+                        &:nth-child(1) {
+                          width: 50%;
+                        }
+                      }
+
+                      
+                    }
+    
+                    
+                
+                   
+                  }
+    
+                  .uploadheader{
+                    gap: 20px;
+                    display: flex;
+                    flex-direction: column;
+                    border-bottom: 1px solid #ddd;
+                    padding-bottom: 15px;
+                  }
+    
+                  .filecontainer{
+                        width: 100px;
+                        height: 100px;
+                        border: 1px solid #ddd;
+                        border-radius: 5px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        background-color: rgb(248, 248, 248);
+    
+                        &:hover{
+                            cursor: pointer;
+                            scale: 1.0;
+                            
+                            background-color: rgb(246, 246, 246);
+                        }
+                        .filedetail{
+                            display: flex;
+                            flex-direction: column;
+                            gap: 5px;
+                            align-items: center;
+                            justify-content: center;
+                            span{
+                                font-size: 12px;
+                                color: grey;
+                            }
+                        }
+                  }
+    
+                  .upload-section{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                    flex-wrap: wrap;
+                    flex-direction: row;
+
+                    button{
+                        width: 100%;
+                        background-color: #FF7600;
+                        color: white;
+                        border: none;
+                        padding: 10px 20px;
+                        border-radius: 5px;
+                        cursor: pointer;
+                        margin-top: 10px;
+                    }
+                    .uploadcontainer{
+                        width: 100px;
+                        height: 100px;
+                        border: 1px solid #ddd;
+                        border-radius: 5px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        background-color: white;
+    
+                        &:hover{
+                            cursor: pointer;
+                            scale: 1.0;
+                            
+                            background-color: rgb(244, 244, 244);
+                        }
+                    }
+                }
+                  
+        
+            }
+          
+           
+        
+            .right{
+               
+                flex:0.5;
+                
+                
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                position: sticky;
+                top: 150px;
+                height: max-content;
+                max-height: 1000px;
+
+                .proceedpayment{
+                  display: flex;
+                  padding: 30px;
+                  flex-direction: column;
+                  background-color: white;
+                  gap: 10px;
+
+                  .paymentheader{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 5px;
+                  }
+
+                  .actions{
+                    .proceedbtn{
+                        width: 100%;
+                        background-color: #FF7600;
+                        color: white;
+                        border: none;
+                        padding: 10px 20px;
+                        border-radius: 5px;
+                        cursor: pointer;
+                        margin-top: 10px;
+
+                        &:hover{
+                            background-color: #FFA900;
+                        }
+                    }
+
+                  
+                  
+                    }
+                }
+                
+
+                .pay{
+                    display: flex;
+                    padding: 30px;
+                    flex-direction: column;
+                    background-color: white;
+                    gap: 10px;
+
+                    .terms{
+                        margin-top: 5px;
+                        font-size: 12px;
+                        color: grey;
+                    }
+                    
+                    .actions{
+                        .proceedbtn{
+                            width: 100%;
+                            background-color: #FF7600;
+                            color: white;
+                            border: none;
+                            padding: 10px 20px;
+                            border-radius: 5px;
+                            cursor: pointer;
+                            margin-top: 10px;
+
+                            &:hover{
+                                background-color: #FFA900;
+                            }
+                        }
+    
+                        .rejectbtn{
+                            width: 100%;
+                            //background-color: #CD113B;
+                            background-color: white;
+                            border: 1px solid #CD113B;
+                            color: #CD113B;
+                            //border: none;
+                            padding: 10px 20px;
+                            border-radius: 5px;
+                            cursor: pointer;
+                            margin-top: 10px;
+
+                            &:hover{
+                                background-color: #CD113B;
+                                color: white;
+                            }
+                        }
+                    }
+
+                }
+            }
+
+        }
+
+
+    }
+    
+  }
+  

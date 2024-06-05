@@ -1,0 +1,268 @@
+.chatbox{
+    display: flex;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+    .container{
+        width: 1100px;
+        display: flex;
+        margin: 45px;
+        box-shadow: 0px 0px 7px 0px #f7e8de;
+        background-color: white;
+        border-radius: 10px 10px 10px 10px;
+        border: 1px solid #ddd;
+        .unactive{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 50px;
+            
+            
+
+            .chatimage{
+                padding-left: 140px;
+                width: 430px;
+                height: 430px;
+                opacity: 0.5;
+            }
+        }
+        
+
+        .left{
+            display: flex;
+            flex-direction: column;
+            border-right: 1px solid #ddd;
+            flex:0.7;
+            gap: 20px;
+            border-radius: 10px 0px 0px 10px;
+            overflow: auto;
+           
+
+
+            .leftheader{
+                display: flex;
+                align-items: center;
+                
+                font-weight: 700;
+                font-size: 24px;
+                
+                margin: 5px;
+                padding-top: 10px;
+
+                p{
+                    margin-left: 14px;
+                    margin-top: 13px;
+                }
+                
+
+            }
+
+            .usermessages{
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+
+                .user{
+                    display: flex;
+                    padding-left: 20px;
+                   
+                    padding: 15px;
+                    cursor: pointer;
+                    
+
+                    &:hover, &.selected{
+                        background-color: #ffd37b;
+                        color: white;
+                    }
+                    
+                    .info{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        padding-left:10px;
+    
+                        p{
+                            font-weight: 700;
+                            font-size: 16px;
+
+                            i{
+                                font-weight: 200;
+                                font-size: 12px;
+                            }
+                        }
+    
+                        span{
+                            font-weight: 300;
+                            font-size: 14px;
+                        }
+                    }
+    
+                    img{
+                        
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 50%;
+                        object-fit: cover;
+                    }
+                }
+
+            }
+
+            
+
+        }
+
+        .right{
+            display: flex;
+            flex:2;
+            flex-direction: column;
+            border-right: 1px solid #ddd;
+            border-top: 1px solid #ddd;
+            border-bottom: 1px solid #ddd;
+            border-radius: 0px 10px 10px 0px;
+
+            
+
+            
+            .rightheader{
+                
+                display: flex;
+                gap: 20px;
+                border-bottom: 1px solid #ddd;
+                font-weight: 500;
+                //width: 100%;
+                box-shadow: 0px 2px 5px -3px rgba(230, 230, 230, 0.75);
+                
+
+
+                .user{
+                    display: flex;
+                    align-items: center;
+                    padding: 20px;
+                    gap: 10px;
+
+                    img{
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 50%;
+                        object-fit: cover;
+                    }
+                }
+            
+            }
+
+            .messagebox{
+               
+                border-radius: 10px;
+                box-shadow: 0px 0px 1px 0px #f7e8de;
+
+
+                
+
+                .messages{
+                background-color: rgb(255, 255, 255);
+                margin-top: 15px;
+                
+                //margin: 30px 0px;
+                padding: 40px;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                height: 300px;
+                width: 780px;
+                overflow: auto;
+                align-items: flex-start;
+                justify-content: flex-start;
+
+                &::-webkit-scrollbar {
+                    //width: 10px;
+                    
+                  }
+                
+        
+                
+    
+                .item{
+                    display: flex;
+                    gap: 20px;
+                    
+                    
+                    max-width: 600px;
+                    font-size: 16px;
+                    
+                    
+    
+                    &.owner{
+                        
+                        flex-direction: row-reverse;
+                        align-self: flex-end;
+    
+                        p{
+                            border-radius: 20px 0px 20px 20px;
+                            background-color: #FFA900;
+                            color: white;
+                        }
+                    }
+                    img{
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 50%;
+                        object-fit: cover;
+    
+                    }
+                    p{
+                        padding: 15px;
+                        background-color: rgb(232, 232, 232);
+                        border-radius:0px 20px 20px 20px ;
+                        color: gray;
+                        font-weight: 300;
+                        
+    
+                    }
+                }
+            }
+
+            }
+
+            .write{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                //padding: 20px;
+                border-top: 1px solid #ddd;
+                
+                
+                
+               
+                textarea{
+                    width: 80%;
+                    padding: 10px;
+                    border: none;
+                    border-radius: 20px;
+                    outline: none;
+                    resize: none;
+                    padding: 20px;
+                    
+    
+                }
+                button{
+                    padding: 5px;
+                    border: none;
+                    border-radius: 0px 0px 10px 0px;
+                    background-color: #FFA900;
+                    color: white;
+                    font-weight: 500;
+                    height:100%;
+                    width: 95px;
+                    
+                    
+    
+                }
+            }
+
+            
+
+        }
+
+    }
+
+}

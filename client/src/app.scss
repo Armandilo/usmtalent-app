@@ -1,0 +1,19 @@
+*{
+    -webkit-font-smoothing: antialiased;
+  
+    .link{
+        text-decoration: none;
+        color: inherit;
+        
+    }
+  
+}
+
+.app{
+    background-color: rgb(245, 245, 245);
+    min-height: 100vh;
+}
+
+html,body{
+    height: 100%;
+}

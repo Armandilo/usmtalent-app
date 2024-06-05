@@ -1,0 +1,43 @@
+.userreview{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 20px 0px;
+    padding-left: 10px;
+    
+    
+
+    p{
+        font-size: 16px;
+    }
+
+    .user{
+        display: flex;
+        align-items: center;
+        
+        .pp{
+            height: 45px;
+            width: 45px;
+            border-radius: 50%;  
+            object-fit: cover;
+            margin-right: 10px;
+            
+        }
+        .country{
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            color: gray;
+
+            img{
+                width: 20px;
+            }
+        }
+    }
+
+    .line{
+        height: 0;
+        border: 0.5px solid rgb(241, 241, 241);
+        margin: 50px 0px;
+    }
+}

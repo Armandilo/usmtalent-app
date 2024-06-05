@@ -1,0 +1,35 @@
+.refund{
+    border: 1px solid rgb(241, 241, 241);
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #fff;
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'roboto', sans-serif;
+
+    .refundcontainer{
+        display: flex;
+        flex-direction: column;
+        
+
+        .refundheader{
+            display: flex;
+            margin-bottom: 10px;
+
+        }
+
+        button{
+            width: 100%;
+            background-color: #FF7600;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+  
+      &:hover {
+        background-color: #f9bc86;
+      }
+        }
+    }
+}

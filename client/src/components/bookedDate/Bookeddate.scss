@@ -1,0 +1,67 @@
+.time-left-to-deliver {
+    border: 1px solid rgb(241, 241, 241);
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #fff;
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'roboto', sans-serif;
+    
+
+    .timeheader{
+        display: flex;
+        margin-bottom: 10px;
+    
+
+    }
+
+    .bookeddate{
+        display: flex;
+        margin-bottom: 20px;
+    }
+  
+    .time-left {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-bottom: 20px;
+
+      .block{
+        width: 1px;
+        background-color: #666;
+        height: 17px;
+        margin-top: 5px;
+      }
+  
+      .time-unit {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+        .number {
+          font-size: 16px;
+          font-weight: 400;
+        }
+  
+        .label {
+          font-size: 0.8em;
+          color: #666;
+        }
+      }
+    }
+  
+    .deliver-now-btn {
+      width: 100%;
+      background-color: #FF7600;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+  
+      &:hover {
+        background-color: #f9bc86;
+      }
+    }
+  }
+  

@@ -1,0 +1,378 @@
+.skill{
+    display: flex;
+    justify-content: center;
+    font-family: 'roboto', sans-serif;
+    
+
+    .container{
+        width: 1350px;
+        padding: 30px 0px;
+        display: flex;
+        gap: 50px;
+
+        
+    
+
+        .left{
+            flex:2;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            background-color: white;
+            padding: 30px;
+            border-radius: 5px;
+            border: 1px solid rgb(241, 241, 241);
+            
+            //max-width: 66.66%;
+
+            .aboutskill{
+                height: 0px;
+                border: 0.1px solid rgb(221, 221, 221);
+                
+                
+            }
+
+            .breadcrumbs{
+                font-weight: 300;
+                font-size: 13px;
+                color: gray;
+            }
+
+            .user{
+                display: flex;
+                align-items: center;
+                gap: 10px;
+
+                .pp{
+                    width: 32px;
+                    height: 32px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                }
+
+                span{
+                    font-size: 14px;
+                    font-weight: 500;
+                }
+
+                .rating{
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+
+                    img{
+                        width: 14px;
+                        height: 14px;
+                    }
+
+                    span{
+                        font-size: 14px;
+                        font-weight: bold;
+                        color: #ffde3c;
+                    }
+                    .total{
+                        font-weight: 300;
+                        color:grey;
+                    }
+
+
+                }
+
+            }
+
+            .slider{
+                background-color: rgb(242, 242, 242);
+                border: 1px solid rgb(221, 221, 221);
+                margin-bottom: 10px;
+                img{
+                    max-height: 460px;
+                    object-fit: contain;
+                    
+                }
+
+                .carousel-next:before{
+                    background-image: url(/right-arrow2.png);
+                    background-size: 30px;
+                    box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.1);
+                    padding: 10px;
+                    border-radius: 50%;
+                    
+                }
+        
+                .carousel-prev:before{
+                    background-image: url(/left-arrow2.png);
+                    background-size: 30px;
+                    box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.1);
+                    padding: 10px;
+                    border-radius: 50%;
+                }
+
+                .carousel-next{
+                    margin-right: 10px;
+                    
+                }
+
+                .carousel-prev{
+                    margin-left: 5px;
+                }
+            }
+
+            h2{
+               font-weight: 400;
+
+            }
+
+            p{
+                font-weight: 300;
+                color: rgb(77, 77, 77);
+                line-height: 25px;
+                text-align: justify;
+                
+            }
+
+            .talent{
+                margin-top: 50px;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+
+                .user{
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+
+                    img{
+                        width: 100px;
+                        height: 100px;
+                        border-radius: 50%;
+                        object-fit: cover;
+                    }
+
+                    .details{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 10px;
+
+                        .rating{
+                            display: flex;
+                            align-items: center;
+                            gap: 5px;
+        
+                            img{
+                                width: 14px;
+                                height: 14px;
+                            }
+        
+                            span{
+                                font-size: 14px;
+                                font-weight: bold;
+                                color: #ffde3c;
+                            }
+                            .total{
+                                font-weight: 300;
+                                color:grey;
+                            }
+                        }
+
+                        button{
+                            padding: 10px 20px;
+                            background-color: #FF7600;
+                            color: white;
+                            border: none;
+                            border-radius: 5px;
+                            cursor: pointer;
+
+                        }
+
+
+                    }
+
+
+
+                }
+
+                .infobox{
+                    border: 1px solid rgb(241, 241, 241);
+                    //border: 1px solid #FF7600;
+                    border-radius: 5px;
+                    padding: 20px;
+                    margin-top: 20px;
+                    background-color: white;
+
+                    .items{
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: space-between;
+
+                        .item{
+                            width: 300px;
+                            display: flex;
+                            flex-direction: column;
+                            gap: 10px;
+                            margin-bottom: 20px;
+
+                            .title{
+                                font-weight: 300;
+                            }
+                        }
+                    }
+
+                   
+                }
+            }
+
+            
+
+            
+
+
+
+
+
+            
+
+
+
+        }
+
+        .right{
+            border: 1px solid rgb(241, 241, 241);
+            flex:1;
+            padding: 20px;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            position: sticky;
+            top: 150px;
+            height: max-content;
+            max-height: 500px;
+            background-color: white;
+
+            .booking{
+                display: flex;
+                flex-direction: column;
+                
+                span{
+                    p{
+                        font-size: 12px;
+                    }
+                }
+                .bookandcontinue{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    .continuebutton{
+                        padding: 10px 20px;
+                        background-color: #FF7600;
+                        color: white;
+                        border: none;
+                        
+                        padding: 17px;
+                        cursor: pointer;
+                    }
+                }
+
+                .subtext{
+                    font-weight: 200;
+                    font-size: 12px;
+                }
+
+                .css-10o2lyd-MuiStack-root {
+                    
+                    .css-z3c6am-MuiFormControl-root-MuiTextField-root{
+                        
+                        width: 160px;
+                        min-width: 160px;
+
+                        .css-o9k5xi-MuiInputBase-root-MuiOutlinedInput-root{
+                            font-size: 14px;
+                        }
+                    }
+                    button{
+                       //padding: 10px 20px;
+                        background-color: #FF7600;
+                        color: white;
+                        border: none;
+                        //border-radius: 5px;
+                        cursor: pointer;
+                        padding: 0;
+                        width: 40px;
+                        height: 40px;
+                        margin-right: 0px;
+                    }
+    
+                }
+
+            }
+
+            
+
+            .price{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                h2{
+                    font-weight: 300;
+                }
+                h3{
+                    font-weight: 500;
+                }
+            }
+
+            p{
+                color: gray;
+                margin: 10px 0px;
+            }
+
+            .details{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                font-size: 14px;
+
+                .item{
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+
+                    img{
+                        width: 20px;
+                        height: 20px;
+                    }
+                }
+            }
+
+            .featured{
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                background-color: white;
+                .item{
+                    display: flex;
+                    gap: 10px;
+                    align-items: center;
+                    font-weight: 300;
+                    color: gray;
+                    img{
+                        width: 14px;
+                        height: 14px;
+                    }
+                }
+            }
+
+            .continuebutton{
+                padding: 10px 20px;
+                background-color: #FF7600;
+                color: white;
+                border: none;
+                //border-radius: 5px;
+                padding: 20px;
+                cursor: pointer;
+            }
+        }
+
+    }
+}

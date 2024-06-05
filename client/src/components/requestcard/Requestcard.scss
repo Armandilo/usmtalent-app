@@ -1,0 +1,140 @@
+.requestcard{
+    display: flex;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+    background-color: rgb(245, 245, 245);
+    .requestcontainer{
+        display: flex !important;
+        flex-wrap: wrap;
+        justify-content: flex-start !important;
+        width: 100%;
+        
+        padding: 30px;
+        background-color: white;
+        border: 1px solid rgb(232, 232, 232);
+        
+        .user{
+            display: flex;
+            flex-direction: row !important;
+            gap: 20px;
+            justify-content: flex-start;
+            align-items: center;
+            width: 320px;
+            .userimage{
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+            .serviceimage{
+                width: 80px;
+                height: 50px;
+                
+                object-fit: cover;
+            }
+
+            span{
+                font-size: 16px;
+                font-weight: 500;
+            }
+        }
+
+        .requestdetail{
+            display: flex;
+            flex-direction: row !important; 
+            gap: 100px;
+            justify-content: center;
+            align-content: center;
+            //margin-left: 130px;
+            
+
+            .price{
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                width: 60px;
+
+                .head{
+                    color:grey;
+                    font-size: 16px;
+                    padding-bottom: 4px;
+                }
+
+                span{
+                    font-size: 14px;
+                }
+            }
+
+            .date{
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                .head{
+                    color:grey;
+                    font-size: 16px;
+                    padding-bottom: 4px;
+                }
+
+                span{
+                    font-size: 14px;
+                }
+            }
+
+            .status{
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                .head{
+                    color:grey;
+                }
+                .progress{
+                    background-color: #FF7600;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 25px;
+                    width: 95px;
+                    border-radius: 10px;
+
+                    &.pending{
+                        background-color: rgb(178, 178, 178);
+                    }
+
+                    &.rejected{
+                        background-color: #FF0000;
+
+                    }
+
+                    &.confirmation{
+                        background-color: #f6a737;
+                    }
+
+                    &.completed{
+                        background-color: #00A86B;
+                    }
+
+
+                    span{
+                        font-size: 12px;
+                        color: white;
+                    }
+                }
+            }
+
+            button{
+                border: none;
+                background: none;
+                background-color: none;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: #FF7600;
+                font-size: 14px;
+                margin-top: 20px; 
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

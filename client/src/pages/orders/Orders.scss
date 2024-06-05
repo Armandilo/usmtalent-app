@@ -1,0 +1,111 @@
+.orders{
+    display: flex;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+
+    .container{
+        //width: 1350px;
+        width: 100%;
+        //padding: 50px 0px;
+
+        .noorder{
+            width: 1350px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+
+            img{
+                width: 450px;
+                height: 450px;
+                object-fit: contain;
+            }
+        }
+
+        .titlecontainer{
+            width: 100%;
+            background-color: #f7e8de;
+            box-sizing: border-box;
+            padding: 40px;
+            margin-bottom: 30px;
+
+            .titlecontent{
+                width: 1350px;
+                margin: auto;
+                display: flex;
+                .title{
+                
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+        
+                }
+
+            }
+            
+
+        }
+
+        
+        .table{
+            width: 1350px;
+            margin: auto;
+            padding: 15px;
+            border: 1px solid #f7e8de;
+            border-radius: 5px;
+            table{
+                width: 100%;
+                
+                border-collapse: collapse;
+                th{
+                    text-align: left;
+                }
+    
+                tr{
+                    height: 50px;
+                    
+
+                   
+    
+                    td{
+                        color: rgb(57, 57, 57);
+                        padding:0px;
+                        
+                        
+                        .skill{
+                            width: 90px;
+                            height: 40px;
+                            
+                            object-fit: contain;
+                        }
+    
+                        
+                    }
+    
+                    .action{
+        
+                        .message{
+                            width: 20px;
+                            cursor: pointer;
+                            margin-left: 20px;
+                            
+                        }
+    
+                       
+                    }
+                    &:nth-child(even){
+                        //background-color: #f7e8de;
+                        border: 1px solid #f7e8de;
+                    
+                    }
+                    
+                    
+    
+                }
+                
+            }
+
+        }
+        
+    }
+}

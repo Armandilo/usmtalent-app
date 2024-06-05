@@ -1,0 +1,139 @@
+.register {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+    flex-direction: column;
+  
+
+    .registercontainer{
+      display: flex;
+      background-color: white;
+      border: 1px solid #ddd;
+      border-radius:5px;
+      margin-top:50px;
+      box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+      form {
+        width: 960px;
+        padding: 30px;
+        display: flex;
+        gap: 40px;
+    
+        h1 {
+          color: rgb(39, 39, 39);
+          margin-bottom: 20px;
+        }
+    
+        .left{
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          justify-content: space-between;
+          
+          border-right: 1px solid #ddd;
+          padding-right: 40px;
+          label {
+            color: gray;
+            font-size: 18px;
+          }
+    
+          input,
+          textarea {
+            padding: 15px;
+            border: 1px solid rgb(216, 214, 214);
+            border-radius: 5px;
+            box-shadow: inset 0 0 2px 0 rgba(0, 0, 0, 0.1);
+          }
+    
+          .inputButton {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              transition: transform 0.3s ease-in-out;
+  
+              &:hover{
+                  transform: scale(1.02);
+              }
+              
+  
+              
+      
+              border: 1px solid #FF7600;
+              width: 70px;
+              height: 70px;
+              padding: 20px;
+              background-color: transparent;
+              border-radius: 50%;
+              cursor: pointer;
+  
+           
+  
+           
+            .icon{
+              color:#FF7600;
+              z-index: 4;
+            }
+          }
+    
+        }
+
+        hr{
+          
+        }
+  
+  
+        .right{
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          //justify-content: space-between;
+          margin-top: 13px;
+    
+          label {
+            color: gray;
+            font-size: 18px;
+          }
+    
+          input,
+          textarea {
+            padding: 15px;
+            border: 1px solid rgb(216, 214, 214);
+            border-radius: 5px;
+            box-shadow: inset 0 0 2px 0 rgba(0, 0, 0, 0.1);
+          }
+    
+          button {
+            border: none;
+            padding: 20px;
+            color: white;
+            font-weight: 500;
+            font-size: 18px;
+            background-color: #FF7600;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 150px;
+            width: 120px;
+            margin-left: 350px;
+            font-size: 14px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+
+            &:hover{
+              background-color: #ff8c27;
+              scale:1.01;
+            }
+
+          }
+  
+        }
+  
+  
+  
+      }
+    }
+  }

@@ -1,0 +1,155 @@
+.skills{
+    display: flex;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+ 
+    .container{
+        width: 100%;
+        //padding: 30px 0px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        .menucontainer{
+            background-color: #52006A;
+            padding: 50px;
+            width: 100%;
+            box-sizing: border-box;
+            margin-bottom: 50px;
+            
+            
+
+            .menucontent{
+                width: 1350px;
+                margin: auto;
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                
+                h1{
+                    color: white;
+                }
+        
+                .breadcrumbs{
+                    font-weight: 300;
+                    font-size: 12px;
+                    color: white;
+                    
+                    
+                }
+        
+                p{
+                    color: white;
+                    font-weight: 300;
+                }
+        
+                .menu{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+        
+                    .left{
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                        color:white;
+                        font-weight: 300;
+        
+                        input{
+                            padding: 5px;
+                            //border: 0.5px solid #FF7600;
+                            outline: none;
+                            border-radius: 5px;
+                            border: none;
+                            
+                            
+                            
+                            &::placeholder{
+                                color: lightgrey;
+                                padding-left: 4px;
+                            }
+                        }
+        
+                        button{
+                            background-color: #FF7600;
+                            color: white;
+                            font-weight: 500;
+                            border: none;
+                            cursor: pointer;
+                            padding: 6px 10px;
+                            border-radius: 5px;
+                        }
+        
+                    }
+        
+                    .right{
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                        position: relative;
+        
+                        .sortBy{
+                            color: white;
+                            font-weight: 300;
+                        }
+        
+                        .sortType{
+                            font-weight: 500;
+                            color: #FF7600;
+                        }
+        
+                        img{
+                            width: 15px;
+                            cursor: pointer;
+                        }
+        
+                        .rightmenu{
+                            padding: 20px;
+                            background-color: white;
+                            border-radius: 10px;
+                            border: 0.5px solid lightgrey;
+                            position: absolute;
+                            top: 30px;
+                            right: 0;
+                            display: flex;
+                            flex-direction: column;
+                            gap: 20px;
+                            color: #555;
+        
+                            span{
+                                cursor: pointer;
+                            }
+                        }
+        
+                    }
+                }
+
+            }
+
+            
+        }
+
+
+        .cardcontainer{
+            width: 1350px;
+            margin: auto;
+            .cards{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: flex-start;
+                
+                >*{
+                    margin-right: 20px;
+                    margin-bottom: 10px;
+
+                    &:last-child{
+                        margin-right: 0px;
+                    }
+                }
+                
+            }
+
+        }
+
+    }
+}

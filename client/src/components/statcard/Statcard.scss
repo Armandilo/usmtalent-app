@@ -1,0 +1,38 @@
+.statcard{
+    display: flex;
+
+    .statcontainer{
+        padding: 20px;
+        border-radius: 10px;
+        display: flex;
+        gap: 20px;
+        background-color: white;
+        width: 280px;
+        .text{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            .title{
+
+            }
+
+            .number{
+                font-size: 24px;
+                font-weight: 500;
+            }
+
+            .detail{
+                font-size: 14px;
+                font-weight: 300;
+
+                .positive{
+                    color: green;
+                }
+
+                .negative{
+                    color:red;
+                }
+            }
+        }
+    }
+}

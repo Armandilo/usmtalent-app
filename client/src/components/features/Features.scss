@@ -1,0 +1,121 @@
+.features{
+    background-color: #52006A;
+    display: flex;
+    font-family: "Roboto", sans-serif;
+    justify-content: center;
+    padding: 100px 0px;
+    .container{
+        display: flex;
+        width: 1350px;
+        align-items: center;
+        gap: 70px;
+        .left{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            
+            h1{
+                margin-bottom: 30px;
+                font-weight: 500;
+                color: white;
+                i{
+                    color: #FF7600;
+                }
+                
+            }
+            p{
+                font-size: 18px;
+                font-weight: 300;
+                color: white;
+                line-height: 28px;
+                letter-spacing: 0.5px;
+                font-family: 'Open sans', sans-serif;
+
+            }
+            .list{
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+                
+                .item{
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    padding-top: 10px;
+                    gap: 25px;
+                    position: relative;
+
+                     .icon{
+                         display: flex;
+                         justify-content: center;
+                         align-items: center;
+                         //background-color: white;
+                         width: 50px;
+                         height: 50px;
+                         //border-radius: 50%;
+                         margin-right: 20px;
+                         margin-left: 20px;
+                        
+                     }
+
+                     .divider{
+                        width: 1px;
+                        height: 70px;
+                        background-color: #FFA900;
+                        color: white;
+                        margin-right: 5px;
+                     }
+     
+                     .itemcontent{
+                         display: flex;
+                         flex-direction: column;
+                         justify-content: center;
+                         align-items: start;
+                     
+     
+                         .title{
+                             font-size: 20px;
+                             font-weight: 500;
+                             color: white;
+                             padding-bottom: 3px;
+                             letter-spacing: 0.8px;
+                             span{
+                                color: #FF7600;
+                             }
+                         }
+     
+     
+                         .desc{
+                             font-size: 16px;
+                             font-weight: 300;
+                             color: white;
+                             line-height: 24px;
+                             letter-spacing: 1px;
+                             font-family: 'Open sans', sans-serif;
+                         }
+                     }
+                     
+                 }
+
+            }
+
+            
+
+        }
+        .right{
+            display: relative;
+            overflow: visible;
+            flex-direction: column;
+            gap: 15px;
+            
+            img{
+                position: absolute;
+                height: auto;
+                top: 1490px;
+                
+                width:500px;
+            }
+
+        }
+    }
+}

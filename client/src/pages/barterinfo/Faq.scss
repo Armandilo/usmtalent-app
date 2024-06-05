@@ -1,0 +1,110 @@
+.faq-page {
+    display: flex;
+    justify-content: center;
+    font-family: 'roboto', sans-serif;
+    
+    .containerfaqall{
+        display: flex;
+        width: 1350px;
+        .sidebar {
+            border: 1px solid rgb(241, 241, 241);
+            flex:1;
+            padding: 20px;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            position: sticky;
+            top: 150px;
+            height: max-content;
+            max-height: 500px;
+            background-color: white;
+            margin-top: 130px;
+
+            ul {
+              list-style: none;
+              padding: 0;
+              li {
+                margin-bottom: 10px;
+                cursor: pointer;
+                padding: 5px 10px;
+                border-radius: 5px;
+                color: #FF7600;
+                &.active {
+                  background-color: #FFA900;
+                  color: #fff;
+                }
+                &:hover {
+                  background-color: #e9ecef;
+                }
+              }
+            }
+          }
+        
+          .faq {
+            display: flex;
+            flex-direction: column;
+            flex: 4;
+            
+            .container {
+              //max-width: 1350px;
+              margin: 0 auto;
+              padding: 20px;
+              margin-top: 20px;
+            }
+          
+            .breadcrumbs {
+              font-size: 12px;
+              //margin-bottom: 30px;
+              color: grey;
+              .link {
+                text-decoration: none;
+                
+              }
+            }
+          
+            h1 {
+              font-size: 36px;
+              margin-bottom: 20px;
+              margin-top: 10px;
+            }
+          
+            .faqcontainer {
+              display: flex;
+              flex-direction: column;
+              background-color: white;
+              padding: 30px;
+              border-radius: 5px;
+              .faq-section {
+                margin-bottom: 40px;
+                
+                h2 {
+                  font-size: 24px;
+                  margin-bottom: 10px;
+                }
+            
+                p, ul, ol, pre {
+                  font-size: 16px;
+                  line-height: 2.5;
+                  
+                }
+            
+                ul, ol {
+                  padding-left: 20px;
+                }
+            
+                pre {
+                  background: #f4f4f4;
+                  padding: 10px;
+                  border-radius: 5px;
+                }
+            
+                code {
+                  font-family: 'Courier New', Courier, monospace;
+                }
+              }
+            }
+          }
+    }
+  }
+  
