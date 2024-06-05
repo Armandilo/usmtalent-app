@@ -15,12 +15,6 @@ import cors from "cors";
 import userreviewRoute from "./routes/userreview.route.js";
 import barterRoute from "./routes/barter.route.js";
 import { verifyToken } from "./middleware/jwt.js";
-import path from 'path';
-import { fileURLToPath } from 'url';
-import { dirname } from 'path';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
 
 const app = express();
 dotenv.config();
@@ -46,7 +40,7 @@ app.use(express.json());
 app.use(cookieParser());
 
 app.use("/api/auth", authRoute);
-app.use("/api/users", verifyToken,userRoute);
+app.use("/api/users", verifyToken, userRoute);
 app.use("/api/skills", skillRoute);
 app.use("/api/orders", verifyToken, orderRoute);
 app.use("/api/conversations", verifyToken, conversationRoute);
@@ -56,15 +50,6 @@ app.use("/api/chatmessages", verifyToken, chatmessageRoute);
 app.use("/api/reviews", verifyToken, reviewRoute);
 app.use("/api/userreviews", verifyToken, userreviewRoute);
 app.use("/api/barter", verifyToken, barterRoute);
-
-// Serve static files from the React app
-app.use(express.static(path.join(__dirname, 'client/build')));
-
-// The "catchall" handler: for any request that doesn't
-// match one above, send back React's index.html file.
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
-});
 
 app.use((err, req, res, next) => {
   const errorStatus = err.status || 500;
