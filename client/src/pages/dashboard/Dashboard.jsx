@@ -134,14 +134,14 @@ const Dashboard = () => {
             const orderMonth = moment(order.createdAt).month();
             const orderYear = moment(order.createdAt).year();
     
-            return order.type === "Barter" && order.sellerId == currentUser._id && orderMonth === currentMonth && orderYear === currentYear;
+            return order.type === "Barter" && (order.sellerId == currentUser._id || order.buyerId == currentUser._id) && orderMonth === currentMonth && orderYear === currentYear;
         });
     
         const barterOrdersLastMonth = orderData.filter((order) => {
             const orderMonth = moment(order.createdAt).month();
             const orderYear = moment(order.createdAt).year();
     
-            return order.type === "Barter" && order.sellerId == currentUser._id && orderMonth === currentMonth - 1 && orderYear === (currentMonth === 0 ? currentYear - 1 : currentYear);
+            return order.type === "Barter" && (order.sellerId == currentUser._id || order.buyerId == currentUser._id) && orderMonth === currentMonth - 1 && orderYear === (currentMonth === 0 ? currentYear - 1 : currentYear);
         });
     
         barterCompleted = barterOrdersThisMonth.length;
@@ -234,7 +234,7 @@ const Dashboard = () => {
 
     if (orderData) {
         const completedOrders = orderData.filter((order) => {
-            return order.isCompleted && (order.sellerId == currentUser._id || order.buyerId == currentUser._id);
+            return order.isCompleted && order.sellerId == currentUser._id;
         });
 
         if (completedOrders.length > 0) {
