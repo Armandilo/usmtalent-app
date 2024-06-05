@@ -114,7 +114,7 @@ const CheckoutForm = ({orderData}) => {
         </div>
         <div className="pricebarter">
           <div className="title">Barter Discount</div>
-          <div className="amount">- RM {orderData?.discount !== null && orderData?.discount !== undefined ? orderData?.discount : "0.00"}</div>
+          <div className="amount">- RM {orderData?.discount !== null && orderData?.discount !== undefined ? orderData?.discount.toFixed(2) : "0.00"}</div>
         </div>
         <hr />
         <div className="pricetotal">
