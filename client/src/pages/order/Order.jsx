@@ -143,7 +143,8 @@ const Order = () => {
 };
 
     const downloadFile = async (url, name) => {
-      const response = await fetch(url);
+      let secureUrl = url.replace("http://", "https://")
+      const response = await fetch(secureUrl);
       const blob = await response.blob();
       const blobUrl = URL.createObjectURL(blob);
       const link = document.createElement('a');
