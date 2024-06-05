@@ -46,7 +46,7 @@ function Login() {
           onChange={(e) => setPassword(e.target.value)}
         />
         <button type="submit">Login</button>
-        {error && <p>error</p>}
+        {error && <p>Invalid Login Details</p>}
       </form>
       <div className="terms">
         <p>By joining, you agree to the USMTalent Terms of Service and to occasionally receive emails from us. Please read our Privacy Policy to learn how we use your personal data.</p>
