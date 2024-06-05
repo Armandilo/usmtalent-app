@@ -77,7 +77,7 @@ const MySkill = () => {
               <div className="rating">
                   <img src="/star.png" alt="" />
                   <span>{!isNaN(skill.totalStars / skill.starNumber) ? Math.round(skill.totalStars / skill.starNumber).toFixed(2) : "0"}</span>
-                  <span className='number'>({skill.sales})</span>
+                  <span className='number'>({skill.starNumber} reviews)</span>
               </div>
 
           </div>
