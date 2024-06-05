@@ -185,7 +185,7 @@ function Paymentmethod({selectedDate}) {
       const response = newRequest.post('/barter', newBarter);
       console.log(response.data);
       handleClosePopup();
-      navigate(`/`);
+      navigate(`/dashboard`);
     } catch (error) {
       console.error(error);
     }
