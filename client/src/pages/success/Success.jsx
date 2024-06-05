@@ -19,11 +19,12 @@ const Success = () => {
           const response = await newRequest.put("/orders", { payment_intent });
           const orderId = response.data._id;
   
+        } catch (err) {
+          console.log(err);
+        } finally {
           setTimeout(() => {
             navigate(`/dashboard`);
           }, 5000);
-        } catch (err) {
-          console.log(err);
         }
       }
     };
