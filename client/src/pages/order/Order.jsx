@@ -5,10 +5,9 @@ import Verticalstepper from '../../components/verticalstepper/Verticalstepper';
 import { useRef } from 'react';
 import { AiOutlineFileAdd } from "react-icons/ai";
 import { FaRegFileArchive } from "react-icons/fa";
-import { AiOutlineDownload } from "react-icons/ai";
+
 import { useState } from 'react';
-import { LiaFileDownloadSolid } from "react-icons/lia";
-import { BsDownload, BsWindowSidebar } from "react-icons/bs";
+
 import { QueryClient } from '@tanstack/react-query';
 import { Link } from 'react-router-dom';
 import Refund from '../../components/refund/Refund';
@@ -16,14 +15,13 @@ import { useQuery } from '@tanstack/react-query';
 import newRequest from '../../utils/newRequest';
 import { useParams } from 'react-router-dom';
 import { useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+
 import Contact from '../../components/contact/Contact';
-import orderModel from '../../../../api/models/order.model';
-import { useQueryClient } from '@tanstack/react-query';
+
 import upload from '../../utils/upload';
 import Verticalstepperbarter from '../../components/verticalStepperBarter/Verticalstepperbarter';
 import moment from 'moment';
-import { set } from 'mongoose';
+
 import Bookeddate from '../../components/bookedDate/Bookeddate';
 
 const Order = () => {
