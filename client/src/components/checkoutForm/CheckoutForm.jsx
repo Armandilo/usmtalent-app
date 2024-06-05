@@ -105,21 +105,21 @@ const CheckoutForm = ({orderData}) => {
           <h1>Order Details</h1>
         </div>
         <div className="skilldetail">
-          <span>{orderData?.skilltitle !== null && orderData?.skilltitle !== undefined ? orderData.skilltitle : orderData.title}</span>
-          <img src={orderData?.cover !== null && orderData?.cover !== undefined ? orderData.cover : orderData.img} alt="" />
+          <span>{orderData?.skilltitle !== null && orderData?.skilltitle !== undefined ? orderData?.skilltitle : orderData?.title}</span>
+          <img src={orderData?.cover !== null && orderData?.cover !== undefined ? orderData?.cover : orderData?.img} alt="" />
         </div>
         <div className="pricesub">
           <div className="title">Subtotal</div>
-          <div className="amount">RM {orderData.price.toFixed(2)}</div>
+          <div className="amount">RM {orderData?.price.toFixed(2)}</div>
         </div>
         <div className="pricebarter">
           <div className="title">Barter Discount</div>
-          <div className="amount">- RM {orderData?.discount !== null && orderData?.discount !== undefined ? orderData.discount : "0.00"}</div>
+          <div className="amount">- RM {orderData?.discount !== null && orderData?.discount !== undefined ? orderData?.discount : "0.00"}</div>
         </div>
         <hr />
         <div className="pricetotal">
           <div className="title">Total</div>
-          <div className="amount">RM {orderData.price.toFixed(2)}</div>
+          <div className="amount">RM {orderData?.price.toFixed(2)}</div>
         </div>
 
 
