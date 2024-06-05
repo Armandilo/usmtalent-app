@@ -44,7 +44,7 @@ const Requestcard = ({barter}) => {
                 <div className="status">
                     <span className='head'>Status</span>
                     <div className={`progress ${barter.status.toLowerCase()}`}>
-                        <span>{(barter.status.toUpperCase())}</span>
+                        <span>{barter.status.toUpperCase() === "AWAITING PAYMENT" ? "PAYMENT" : barter.status.toUpperCase()}</span>
                     </div>
                 </div>
                 <Link to={`/barter/${barter._id}`} className='link'>
