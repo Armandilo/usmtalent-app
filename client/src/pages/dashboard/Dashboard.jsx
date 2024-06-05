@@ -225,9 +225,9 @@ const Dashboard = () => {
     };
 
     const stats = [
-        { title: 'Orders Completed', value: ordersCompleted, change: ordersChange },
-        { title: 'Total Earnings', value: `RM ${totalEarnings.toFixed(2)}`, change: earningsChange },
-        { title: 'Barter Completed', value: barterCompleted, change: barterChange },
+        { title: 'Orders Completed', value: ordersCompleted, change: isFinite(ordersChange) ? ordersChange : 0 },
+        { title: 'Total Earnings', value: `RM ${totalEarnings.toFixed(2)}`, change: isFinite(earningsChange) ? earningsChange : 0},
+        { title: 'Barter Completed', value: barterCompleted, change: isFinite(barterChange) ? barterChange : 0 },
     ]
 
     let lastDelivery = "No deliveries yet";
