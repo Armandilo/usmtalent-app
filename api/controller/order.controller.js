@@ -39,6 +39,7 @@ export const intent = async (req, res, next) => {
 
   res.status(200).send({
     clientSecret: paymentIntent.client_secret,
+    orderId: newOrder._id,
 
   });
 };
@@ -76,10 +77,14 @@ export const intentbarter = async (req, res, next) => {
 
   barter.status = "Completed";
   await barter.save();
-
+  const skillId = barter.skillValue1 > barter.skillValue2 ? barter.skillId2 : barter.skillId1;
+  const skill = await Skill.findById(skillId);
   res.status(200).send({
     clientSecret: paymentIntent.client_secret,
-
+    orderId: newOrder._id,
+    cover: skill.cover,
+    discount: barter.discount,
+    skilltitle: skill.title,
   });
 };
 

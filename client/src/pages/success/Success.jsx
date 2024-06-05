@@ -20,7 +20,7 @@ const Success = () => {
           const orderId = response.data._id;
   
           setTimeout(() => {
-            navigate(`/order/${orderId}`);
+            navigate(`/dashboard`);
           }, 5000);
         } catch (err) {
           console.log(err);
@@ -34,7 +34,7 @@ const Success = () => {
 
   return (
     <div className="success">
-      Payment successful. <br/>You are being redirected to the order page...
+      Payment successful. <br/>You are being redirected to the dashboard...
     </div>
   );
 };

@@ -12,7 +12,7 @@ const stripePromise = loadStripe(
 
 const Paymentbarter = () => {
   const [clientSecret, setClientSecret] = useState("");
-
+  const [orderData, setOrderData] = useState(null);
   const { id } = useParams();
 
   useEffect(() => {
@@ -22,7 +22,14 @@ const Paymentbarter = () => {
           `/orders/create-barter-intent/${id}`
         );
         setClientSecret(res.data.clientSecret);
-
+        
+        const orderRes = await newRequest.get(`/orders/${res.data.orderId}`);
+        setOrderData({
+          ...orderRes.data,
+          cover: res.data.cover,
+          discount: res.data.discount,
+          skilltitle: res.data.skilltitle,
+        });
       } catch (err) {
         console.log(err);
       }
@@ -43,7 +50,7 @@ const Paymentbarter = () => {
   return <div className="pay">
     {clientSecret && (
         <Elements options={options} stripe={stripePromise}>
-          <CheckoutForm/>
+          <CheckoutForm orderData={orderData}/>
         </Elements>
       )}
   </div>;

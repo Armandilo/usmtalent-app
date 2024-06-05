@@ -13,7 +13,7 @@ const stripePromise = loadStripe(
 
 const Payment = () => {
   const [clientSecret, setClientSecret] = useState("");
-
+  const [orderData, setOrderData] = useState(null);
   const { id, selectedDate = null } = useParams();
 
 
@@ -26,6 +26,9 @@ const Payment = () => {
         );
         console.log("Selected Date in make Request",selectedDate);
         setClientSecret(res.data.clientSecret);
+
+        const orderRes = await newRequest.get(`/orders/${res.data.orderId}`);
+        setOrderData(orderRes.data);
 
       } catch (err) {
         console.log(err);
@@ -47,7 +50,7 @@ const Payment = () => {
   return <div className="pay">
     {clientSecret && (
         <Elements options={options} stripe={stripePromise}>
-          <CheckoutForm/>
+          <CheckoutForm orderData={orderData}/>
         </Elements>
       )}
   </div>;

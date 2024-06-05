@@ -11,7 +11,7 @@ import newRequest from "../../utils/newRequest";
 
 
 
-const CheckoutForm = () => {
+const CheckoutForm = ({orderData}) => {
   const stripe = useStripe();
   const elements = useElements();
 
@@ -105,21 +105,21 @@ const CheckoutForm = () => {
           <h1>Order Details</h1>
         </div>
         <div className="skilldetail">
-          <span>I will create and design UI/UX for your website</span>
-          <img src="../productimg1.png" alt="" />
+          <span>{orderData.skilltitle || orderData.title}</span>
+          <img src={orderData.cover || orderData.img} alt="" />
         </div>
         <div className="pricesub">
           <div className="title">Subtotal</div>
-          <div className="amount">RM 100.00</div>
+          <div className="amount">RM {orderData.price.toFixed(2)}</div>
         </div>
         <div className="pricebarter">
           <div className="title">Barter Discount</div>
-          <div className="amount">- RM 50.00</div>
+          <div className="amount">- RM {orderData.discount || "0.00"}</div>
         </div>
         <hr />
         <div className="pricetotal">
           <div className="title">Total</div>
-          <div className="amount">RM 50.00</div>
+          <div className="amount">RM {orderData.price.toFixed(2)}</div>
         </div>
 
 
