@@ -18,8 +18,10 @@ function Login() {
     e.preventDefault();
     try {
       const res = await newRequest.post("/auth/login", { username, password });
-      localStorage.setItem("currentUser", JSON.stringify(res.data));
+      const { token, ...user } = res.data;
+      localStorage.setItem("currentUser", JSON.stringify({ ...user, token }));
       handleClosePopup();
+      navigate("/dashboard"); // Redirect to dashboard or any other page after login
     } catch (err) {
       setError(err.response.data);
     }
@@ -34,7 +36,6 @@ function Login() {
         <input
           name="username"
           type="text"
-          
           onChange={(e) => setUsername(e.target.value)}
         />
 
