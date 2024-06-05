@@ -234,7 +234,7 @@ const Dashboard = () => {
 
     if (orderData) {
         const completedOrders = orderData.filter((order) => {
-            return order.isCompleted && order.sellerId == currentUser._id;
+            return order.isCompleted && (order.sellerId == currentUser._id || order.buyerId == currentUser._id);
         });
 
         if (completedOrders.length > 0) {
