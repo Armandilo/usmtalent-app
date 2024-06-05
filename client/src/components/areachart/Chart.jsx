@@ -47,7 +47,7 @@ const Chart = ({orderData}) => {
           </defs>
           
           <XAxis dataKey="name" axisLine={false} tickLine={false} tickFormatter={(value) => value !== 0 ? value : ''}/>
-          <YAxis axisLine={false} tickLine={false} tickFormatter={(value) => value !== 0 ? value : ''} domain={[0, 500]}/>
+          <YAxis axisLine={false} tickLine={false} tickFormatter={(value) => value !== 0 ? value : ''} domain={[0, 400]}/>
           <Tooltip />
           <Area type="monotone" dataKey="RM" stroke="#FF7600"  strokeWidth={1} fill="url(#colorUv)" />
         </AreaChart>

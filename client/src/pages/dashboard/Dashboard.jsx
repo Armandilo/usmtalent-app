@@ -90,6 +90,8 @@ const Dashboard = () => {
     let totalEarnings = 0;
     let ordersChange = 0;
     let earningsChange = 0;
+    let barterCompleted = 0;
+    let barterChange = 0;
     
     if (orderData) {
         const completedOrdersThisMonth = orderData.filter((order) => {
@@ -125,6 +127,25 @@ const Dashboard = () => {
         ordersChange = ((completedOrdersThisMonth.length - completedOrdersLastMonth.length) / completedOrdersLastMonth.length) * 100;
         earningsChange = ((totalEarningsThisMonth - totalEarningsLastMonth) / totalEarningsLastMonth) * 100;
 
+    }
+
+    if (orderData) {
+        const barterOrdersThisMonth = orderData.filter((order) => {
+            const orderMonth = moment(order.createdAt).month();
+            const orderYear = moment(order.createdAt).year();
+    
+            return order.type === "Barter" && order.sellerId == currentUser._id && orderMonth === currentMonth && orderYear === currentYear;
+        });
+    
+        const barterOrdersLastMonth = orderData.filter((order) => {
+            const orderMonth = moment(order.createdAt).month();
+            const orderYear = moment(order.createdAt).year();
+    
+            return order.type === "Barter" && order.sellerId == currentUser._id && orderMonth === currentMonth - 1 && orderYear === (currentMonth === 0 ? currentYear - 1 : currentYear);
+        });
+    
+        barterCompleted = barterOrdersThisMonth.length;
+        barterChange = ((barterOrdersThisMonth.length - barterOrdersLastMonth.length) / barterOrdersLastMonth.length) * 100;
     }
 
     const fetchUser = async (id) => {
@@ -206,7 +227,7 @@ const Dashboard = () => {
     const stats = [
         { title: 'Orders Completed', value: ordersCompleted, change: ordersChange },
         { title: 'Total Earnings', value: `RM ${totalEarnings.toFixed(2)}`, change: earningsChange },
-        { title: 'Barter Completed', value: 'N/A', change: 'N/A' },
+        { title: 'Barter Completed', value: barterCompleted, change: barterChange },
     ]
 
     let lastDelivery = "No deliveries yet";
