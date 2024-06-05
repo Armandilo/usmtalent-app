@@ -30,7 +30,7 @@ const UserProfile = () => {
 
   const currentUser = JSON.parse(localStorage.getItem("currentUser"));
   const {id} = useParams();
-  const history = useHistory();
+
 
   //Handle User Profile Edit
   const [file, setFile] = useState(null);
@@ -71,7 +71,7 @@ const UserProfile = () => {
       const updatedUser = { ...currentUser, desc: newDescription, img: url };
       localStorage.setItem('currentUser', JSON.stringify(updatedUser));
       setIsEditing(false);
-      history.push('/profile' +id)
+      
     } catch (err) {
       console.log(err);
     }
