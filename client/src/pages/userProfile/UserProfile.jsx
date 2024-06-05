@@ -17,7 +17,7 @@ import upload from '../../utils/upload'
 import { FiPlus } from "react-icons/fi";
 import { FaCheck } from "react-icons/fa";
 import Calendar from '../../components/calendar/Calendar';
-
+import {useHistory} from 'react-router-dom';
 
 
 
@@ -30,6 +30,7 @@ const UserProfile = () => {
 
   const currentUser = JSON.parse(localStorage.getItem("currentUser"));
   const {id} = useParams();
+  const history = useHistory();
 
   //Handle User Profile Edit
   const [file, setFile] = useState(null);
@@ -70,7 +71,7 @@ const UserProfile = () => {
       const updatedUser = { ...currentUser, desc: newDescription, img: url };
       localStorage.setItem('currentUser', JSON.stringify(updatedUser));
       setIsEditing(false);
-      window.location.reload();
+      history.push('/profile' +id)
     } catch (err) {
       console.log(err);
     }
