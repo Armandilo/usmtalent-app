@@ -14,6 +14,7 @@ import chatmessageRoute from "./routes/chatmessage.route.js";
 import cors from "cors";
 import userreviewRoute from "./routes/userreview.route.js";
 import barterRoute from "./routes/barter.route.js";
+
 const app = express();
 dotenv.config();
 mongoose.set("strictQuery", true);
@@ -21,13 +22,18 @@ mongoose.set("strictQuery", true);
 const connect = async () => {
   try {
     await mongoose.connect(process.env.MONGO);
-    console.log("Connected to mongoDB!");
+    console.log("Connected to MongoDB!");
   } catch (error) {
-    console.log(error);
+    console.log("Error connecting to MongoDB:", error);
   }
 };
 
-app.use(cors({ origin: "http://localhost:5173", credentials: true }));
+app.use(
+  cors({
+    origin: process.env.CLIENT_URL || "http://localhost:5173",
+    credentials: true,
+  })
+);
 app.use(express.json());
 app.use(cookieParser());
 
@@ -37,8 +43,8 @@ app.use("/api/skills", skillRoute);
 app.use("/api/orders", orderRoute);
 app.use("/api/conversations", conversationRoute);
 app.use("/api/messages", messageRoute);
-app.use("/api/chat", chatRoute)
-app.use("/api/chatmessages", chatmessageRoute)
+app.use("/api/chat", chatRoute);
+app.use("/api/chatmessages", chatmessageRoute);
 app.use("/api/reviews", reviewRoute);
 app.use("/api/userreviews", userreviewRoute);
 app.use("/api/barter", barterRoute);
@@ -46,11 +52,12 @@ app.use("/api/barter", barterRoute);
 app.use((err, req, res, next) => {
   const errorStatus = err.status || 500;
   const errorMessage = err.message || "Something went wrong!";
-
-  return res.status(errorStatus).send(errorMessage);
+  console.error("Error:", errorMessage);
+  return res.status(errorStatus).json({ message: errorMessage });
 });
 
-app.listen(8800, () => {
+const PORT = process.env.PORT || 8800;
+app.listen(PORT, () => {
   connect();
-  console.log("Backend server is running!");
+  console.log(`Backend server is running on port ${PORT}!`);
 });
