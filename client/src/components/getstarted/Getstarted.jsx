@@ -1,7 +1,7 @@
 import React from 'react'
 import './Getstarted.scss'
 import { FaCheck } from "react-icons/fa6";
-
+import { Link } from 'react-router-dom'
 const Getstarted = () => {
   return (
     <div className='getstarted'>
@@ -14,7 +14,7 @@ const Getstarted = () => {
                 <div className="searchbar">
                     <input type="text" placeholder="Enter your Email" />
                 </div>
-                <button className='searchbutton'>Get Started</button>
+                <Link to="/register" className="link"><button className='searchbutton'>Get Started</button></Link>
             </div>
 
             <div className="condition">
